@@ -53,8 +53,16 @@ public class JobTest {
 
     //should return string that contains a blank line before  & after job information
     @Test
-    public void testForBlankLine() {
-        assertTrue(new_job3.toString().startsWith(" "));
-        assertTrue(new_job3.toString().endsWith(" "));
+    public void testForBlankLines() {
+        assertTrue(new_job3.toString().startsWith("\n"));
+        assertTrue(new_job3.toString().endsWith("\n"));
+    }
+
+    //string should contain field label, field data, each field on own line.
+
+    @Test
+    public void testForFieldLabelDataStructure() {
+        if
+
     }
 }

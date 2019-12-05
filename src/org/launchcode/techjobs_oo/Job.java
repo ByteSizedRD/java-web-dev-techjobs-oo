@@ -30,6 +30,29 @@ public class Job {
         this.coreCompetency = coreCompetency;
     }
 
+//    //toString method for passing testForBlankLine
+//    public String toString() {
+//        return " ";
+//    }
+
+    //toString method for field label, data, and output structure
+
+    public String toString() {
+
+//        String fieldOutput = String.join("\nID: " + id,
+//                "\nName: " + name,
+//                "\nEmployer" + employer.getValue(),
+//                "\nLocation: " + location.getValue(),
+//                "\nPostion Type: " + positionType.getValue(),
+//                "\nCore Competency: " + coreCompetency.getValue(),
+//                "\n";)
+
+
+        /*thoughts: instead create a Job parameter and create String values for each field, i.e. jobField.getLocation()
+        instead of location.getValue()
+
+
+    }
 
     //added equals() and hashCode() after adding getters/setters, equal set to id fields match
 
