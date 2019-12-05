@@ -20,11 +20,7 @@ public class PositionType {
 //added toString method to return data stored in value (Used "Generate" to create code)
 
     @Override
-    public String toString() {
-        return "PositionType{" +
-                "value='" + value + '\'' +
-                '}';
-    }
+    public String toString() { return value; }
 
 
 

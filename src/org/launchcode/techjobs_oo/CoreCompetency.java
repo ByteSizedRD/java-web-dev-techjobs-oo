@@ -42,7 +42,7 @@ public class CoreCompetency {
         return id;
     }
 
-//generated getter/setter for value
+    //generated getter/setter for value
     public String getValue() {
         return value;
     }
