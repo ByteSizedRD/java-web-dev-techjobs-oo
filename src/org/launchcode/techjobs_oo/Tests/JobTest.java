@@ -4,8 +4,7 @@ import org.junit.Before;
 import org.junit.Test;
 import org.launchcode.techjobs_oo.*;
 
-import static junit.framework.TestCase.assertEquals;
-import static junit.framework.TestCase.assertTrue;
+import static junit.framework.TestCase.*;
 
 
 public class JobTest {
@@ -14,12 +13,17 @@ public class JobTest {
     Job new_job1;
     Job new_job2;
     Job new_job3;
+    Job new_job4;
+    Job new_job5;
 
     //using @Before to set Job objects for testing
     @Before
     public void testJobObjects() {
         new_job1 = new Job();
         new_job2 = new Job();
+        new_job3 = new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
+        new_job4 = new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
+        new_job5 = new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
     }
 
     //each Job object should be not the same, differ by 1
@@ -34,7 +38,6 @@ public class JobTest {
 
     @Test
     public void testJobConstructorSetAllFields() {
-        new_job3 = new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
         assertTrue(new_job3 instanceof Job);
         assertEquals(3, new_job3.getId(), .001);
         assertTrue((new_job3.getName() == "Product tester"));
@@ -44,7 +47,9 @@ public class JobTest {
         assertTrue((new_job3.getCoreCompetency().getValue() == "Persistence"));
     }
 
-
-
+    @Test
+    public void testJobsForEquality() {
+        assertFalse(new_job4.equals(new_job5));
+    }
 
 }
