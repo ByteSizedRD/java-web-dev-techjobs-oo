@@ -23,10 +23,9 @@ public class JobTest {
         new_job2 = new Job();
         new_job3 = new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
         new_job4 = new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
-        new_job5 = new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
     }
 
-    //each Job object should be not the same, differ by 1
+    //each Job object id should be not the same, differ by +/- 1
     @Test
     public void testSettingJobId() {
         assertTrue(!new_job1.equals(new_job2));
@@ -49,7 +48,13 @@ public class JobTest {
 
     @Test
     public void testJobsForEquality() {
-        assertFalse(new_job4.equals(new_job5));
+        assertFalse(new_job3.equals(new_job4));
     }
 
+    //should return string that contains a blank line before  & after job information
+    @Test
+    public void testForBlankLine() {
+        assertTrue(new_job3.toString().startsWith(" "));
+        assertTrue(new_job3.toString().endsWith(" "));
+    }
 }
