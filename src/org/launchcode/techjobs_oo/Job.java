@@ -16,9 +16,9 @@ public class Job {
 
     //added constructors for unique ID and initializing fields
 
-    public Job(int id) {
+    public Job() {
         this.id = nextId;
-        nextId++
+        nextId++;
     }
 
     public Job(String name, Employer employer, Location location, PositionType positionType, CoreCompetency coreCompetency) {

@@ -28,7 +28,7 @@ public class PositionType {
     //https://www.javaworld.com/article/3305792/comparing-java-objects-with-equals-and-hashcode.html
 
     @Override
-    public boolean equals(Object o) {+
+    public boolean equals(Object o) {
         if (this == o) return true;
         if (!(o instanceof PositionType)) return false;
         PositionType that = (PositionType) o;
