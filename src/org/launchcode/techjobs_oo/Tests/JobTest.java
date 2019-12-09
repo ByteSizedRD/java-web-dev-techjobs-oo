@@ -4,6 +4,8 @@ import org.junit.Before;
 import org.junit.Test;
 import org.launchcode.techjobs_oo.*;
 
+import java.time.Clock;
+
 import static junit.framework.TestCase.*;
 
 
@@ -62,7 +64,19 @@ public class JobTest {
 
     @Test
     public void testForFieldLabelDataStructure() {
-        if
-
+        assertEquals(
+                "\nID: 3" + "\nName: " + "Product tester" +
+                "\nEmployer: " + "ACME" +
+                "\nLocation: " + "Desert" +
+                "\nPosition Type: " + "Quality control" +
+                "\nCore Competency: " + "Persistence" + "\n", Job.toString(new_job3));
     }
 }
+//**From Job: using to write accurate tests
+//    int id = "\nID: " + job.getId();
+//    String name = "\nName: " + job.getName();
+//    String employer = "\nEmployer: " + job.getEmployer();
+//    String location = "\nLocation: " + job.getLocation();
+//    String positionType = "\nPosition Type: " + job.getPositionType();
+//    String coreCompetency = "\nCore Competency: " + job.getCoreCompetency();
+//    new_job3 = new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));

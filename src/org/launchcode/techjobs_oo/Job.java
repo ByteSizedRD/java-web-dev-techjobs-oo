@@ -30,28 +30,45 @@ public class Job {
         this.coreCompetency = coreCompetency;
     }
 
-//    //toString method for passing testForBlankLine
-//    public String toString() {
-//        return " ";
-//    }
+    //toString method for passing testForBlankLine
+    public String toString() {
+        return " ";
+    }
 
     //toString method for field label, data, and output structure
 
-    public String toString() {
 
-//        String fieldOutput = String.join("\nID: " + id,
-//                "\nName: " + name,
-//                "\nEmployer" + employer.getValue(),
-//                "\nLocation: " + location.getValue(),
-//                "\nPostion Type: " + positionType.getValue(),
-//                "\nCore Competency: " + coreCompetency.getValue(),
-//                "\n";)
+    public static String toString(Job job) {
+        String id = "\nID: " + job.getId();
+        String name = "\nName: " + job.getName();
+        String employer = "\nEmployer: " + job.getEmployer();
+        String location = "\nLocation: " + job.getLocation();
+        String positionType = "\nPosition Type: " + job.getPositionType();
+        String coreCompetency = "\nCore Competency: " + job.getCoreCompetency();
 
+//        String id = "\nID: " + id;
+//        String name = "\nName: " + this.name;
+//        String employer = "\nEmployer: " + this.employer;
+//        String location = "\nLocation: " + this.location;
+//        String positionType = "\nPosition Type: " + this.positionType;
+//        String coreCompetency = "\nCore Competency: " + this.coreCompetency;
 
-        /*thoughts: instead create a Job parameter and create String values for each field, i.e. jobField.getLocation()
-        instead of location.getValue()
-
-
+        if (name == "") {
+            name = "\nName: \"Data Not Available\"";
+        }
+        if(employer == "") {
+            employer = "\nEmployer: \"Data Not Available\"";
+        }
+        if(location == "") {
+            location = "\nLocation: \"Data Not Available\"";
+        }
+        if (positionType == "") {
+            positionType = "\nPosition Type: \"Data Not Available\"";
+        }
+        if (coreCompetency == "") {
+            coreCompetency = "\nCore Competency: \"Data Not Available\"";
+        }
+        return (id + name + employer + location + positionType + coreCompetency + "\n");
     }
 
     //added equals() and hashCode() after adding getters/setters, equal set to id fields match
@@ -115,4 +132,5 @@ public class Job {
     public void setCoreCompetency(CoreCompetency coreCompetency) {
         this.coreCompetency = coreCompetency;
     }
+
 }
