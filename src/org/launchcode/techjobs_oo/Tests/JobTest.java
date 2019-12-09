@@ -25,6 +25,7 @@ public class JobTest {
         new_job2 = new Job();
         new_job3 = new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
         new_job4 = new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
+        new_job5 = new Job("", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
     }
 
     //each Job object id should be not the same, differ by +/- 1
@@ -70,6 +71,11 @@ public class JobTest {
                 "\nLocation: " + "Desert" +
                 "\nPosition Type: " + "Quality control" +
                 "\nCore Competency: " + "Persistence" + "\n", Job.toString(new_job3));
+    }
+
+    @Test
+    public void testForDataNotAvailable() {
+        assertTrue(new_job5.toString().contains("Data Not Available"));
     }
 }
 //**From Job: using to write accurate tests
