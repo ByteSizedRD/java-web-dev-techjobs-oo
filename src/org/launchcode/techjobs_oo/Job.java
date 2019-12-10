@@ -2,6 +2,8 @@ package org.launchcode.techjobs_oo;
 
 import java.util.Objects;
 
+import static java.lang.String.valueOf;
+
 public class Job {
 
     private int id;
@@ -12,6 +14,7 @@ public class Job {
     private Location location;
     private PositionType positionType;
     private CoreCompetency coreCompetency;
+
 
 
     //added constructors for unique ID and initializing fields
@@ -30,45 +33,40 @@ public class Job {
         this.coreCompetency = coreCompetency;
     }
 
-    //toString method for passing testForBlankLine
-    public String toString() {
-        return " ";
-    }
+//    //toString method for passing testForBlankLine
+//    public String toString() {
+//        return " ";
+//    }
 
     //toString method for field label, data, and output structure
 
 
-    public static String toString(Job job) {
-        String id = "\nID: " + job.getId();
-        String name = "\nName: " + job.getName();
-        String employer = "\nEmployer: " + job.getEmployer();
-        String location = "\nLocation: " + job.getLocation();
-        String positionType = "\nPosition Type: " + job.getPositionType();
-        String coreCompetency = "\nCore Competency: " + job.getCoreCompetency();
+    public String toString() {
+        String aId = "\nID: " + this.getId();
+        String aname = "\nName: " + this.getName();
+        String aemployer = "\nEmployer: " + this.getEmployer();
+        String alocation = "\nLocation: " + this.getLocation();
+        String apositionType = "\nPosition Type: " + this.getPositionType();
+        String acoreCompetency = "\nCore Competency: " + this.getCoreCompetency();
 
-//        String id = "\nID: " + id;
-//        String name = "\nName: " + this.name;
-//        String employer = "\nEmployer: " + this.employer;
-//        String location = "\nLocation: " + this.location;
-//        String positionType = "\nPosition Type: " + this.positionType;
-//        String coreCompetency = "\nCore Competency: " + this.coreCompetency;
 
-        if (name == "") {
-            name = "\nName: \"Data Not Available\"";
+        if (this.getEmployer().getValue() == null) {
+            aname = "\nName: \"Data Not Available\"";
         }
-        if(employer == "") {
-            employer = "\nEmployer: \"Data Not Available\"";
+        if(this.getEmployer().getValue() == null) {
+            aemployer = "\nEmployer: Data Not Available";
         }
-        if(location == "") {
-            location = "\nLocation: \"Data Not Available\"";
+        if(this.getEmployer().getValue() == null) {
+            alocation = "\nLocation: \"Data Not Available\"";
         }
-        if (positionType == "") {
-            positionType = "\nPosition Type: \"Data Not Available\"";
+        if (this.getEmployer().getValue() == null) {
+            apositionType = "\nPosition Type: \"Data Not Available\"";
         }
-        if (coreCompetency == "") {
-            coreCompetency = "\nCore Competency: \"Data Not Available\"";
+        if (this.getEmployer().getValue() == null) {
+            acoreCompetency = "\nCore Competency: \"Data Not Available\"";
         }
-        return (id + name + employer + location + positionType + coreCompetency + "\n");
+
+        return (aId + aname + aemployer + alocation + apositionType + acoreCompetency + "\n");
     }
 
     //added equals() and hashCode() after adding getters/setters, equal set to id fields match
