@@ -50,19 +50,19 @@ public class Job {
         String acoreCompetency = "\nCore Competency: " + this.getCoreCompetency();
 
 
-        if (this.getName() == null) {
+        if (this.getName() == "") {
             aname = "\nName: Data Not Available";
         }
-        if (this.getEmployer().getValue() == null) {
+        if (this.getEmployer().getValue() == "") {
             aemployer = "\nEmployer: Data Not Available";
         }
-        if (this.getLocation().getValue() == null) {
+        if (this.getLocation().getValue() == "") {
             alocation = "\nLocation: \"Data Not Available\"";
         }
-        if (this.getPositionType().getValue() == null) {
+        if (this.getPositionType().getValue() == "") {
             apositionType = "\nPosition Type: Data Not Available";
         }
-        if (this.getCoreCompetency().getValue() == null) {
+        if (this.getCoreCompetency().getValue() == "") {
             acoreCompetency = "\nCore Competency: Data Not Available";
         }
 

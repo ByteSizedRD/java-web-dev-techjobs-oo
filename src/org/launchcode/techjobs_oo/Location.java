@@ -8,6 +8,8 @@ public class Location extends JobField  {
         super(value);
     }
 
+
+
 //    private int id;
 //    private static int nextId = 1;
 //    private String value;

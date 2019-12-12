@@ -75,7 +75,7 @@ public class JobTest {
     @Test
     public void testForDataNotAvailable() {
         Job new_job5;
-        new_job5 = new Job("Product tester", new Employer(), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
+        new_job5 = new Job("Product tester", new Employer(""), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
         assertEquals( "\nID: 5" + "\nName: " + "Product tester" +
                 "\nEmployer: " + "Data Not Available" +
                 "\nLocation: " + "Desert" +
