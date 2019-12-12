@@ -16,7 +16,7 @@ public class JobTest {
     Job new_job2;
     Job new_job3;
     Job new_job4;
-    Job new_job5;
+
 
     //using @Before to set Job objects for testing
     @Before
@@ -25,7 +25,6 @@ public class JobTest {
         new_job2 = new Job();
         new_job3 = new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
         new_job4 = new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
-        new_job5 = new Job("Product tester", new Employer(), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
     }
 
     //each Job object id should be not the same, differ by +/- 1
@@ -75,6 +74,8 @@ public class JobTest {
 
     @Test
     public void testForDataNotAvailable() {
+        Job new_job5;
+        new_job5 = new Job("Product tester", new Employer(), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
         assertEquals( "\nID: 5" + "\nName: " + "Product tester" +
                 "\nEmployer: " + "Data Not Available" +
                 "\nLocation: " + "Desert" +
