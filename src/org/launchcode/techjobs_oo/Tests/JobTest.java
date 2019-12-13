@@ -40,7 +40,7 @@ public class JobTest {
     @Test
     public void testJobConstructorSetAllFields() {
         assertTrue(new_job3 instanceof Job);
-        assertEquals(3, new_job3.getId(), .001);
+        assertEquals(11.0, new_job3.getId(), .001);
         assertTrue((new_job3.getName() == "Product tester"));
         assertTrue((new_job3.getEmployer().getValue() == "ACME"));
         assertTrue((new_job3.getLocation().getValue() =="Desert"));
@@ -65,7 +65,7 @@ public class JobTest {
     @Test
     public void testForFieldLabelDataStructure() {
         assertEquals(
-                "\nID: 3" + "\nName: " + "Product tester" +
+                "\nID: 7" + "\nName: " + "Product tester" +
                 "\nEmployer: " + "ACME" +
                 "\nLocation: " + "Desert" +
                 "\nPosition Type: " + "Quality control" +
@@ -76,7 +76,7 @@ public class JobTest {
     public void testForDataNotAvailable() {
         Job new_job5;
         new_job5 = new Job("Product tester", new Employer(""), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
-        assertEquals( "\nID: 5" + "\nName: " + "Product tester" +
+        assertEquals( "\nID: 17" + "\nName: " + "Product tester" +
                 "\nEmployer: " + "Data Not Available" +
                 "\nLocation: " + "Desert" +
                 "\nPosition Type: " + "Quality control" +

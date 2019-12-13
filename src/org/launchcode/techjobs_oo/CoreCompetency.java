@@ -8,6 +8,10 @@ public class CoreCompetency extends JobField  {
         super(value);
     }
 
+    public CoreCompetency() {
+        super();
+    }
+
 
 
 

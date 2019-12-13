@@ -8,6 +8,10 @@ public class Location extends JobField  {
         super(value);
     }
 
+    public Location() {
+        super();
+    }
+
 
 
 //    private int id;
